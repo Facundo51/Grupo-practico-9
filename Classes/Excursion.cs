@@ -14,6 +14,8 @@ namespace Classes
         private int _dias;
         private decimal _costo;
 
+        public DateTime FechaComienzo {  get { return _fechaComienzo; } }
+
         public Excursion(
             string codig,
             string descripcion,
