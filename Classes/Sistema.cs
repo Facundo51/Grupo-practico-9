@@ -21,8 +21,12 @@ namespace Classes
                 {
                     _clientes.Add(nuevo);
                 }
-            }
-           
+        }
+    
+
+        public void PrecargarNacionales()
+        {
 
         }
     }
+}
