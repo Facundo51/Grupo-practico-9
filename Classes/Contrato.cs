@@ -15,6 +15,8 @@ namespace Classes
         private int _cantMenores;
         private decimal _precio;
 
+        public Cliente Cliente { get { return _cliente } }
+
         public Contrato(
             Cliente cliente,
             Excursion excursion,
@@ -29,5 +31,7 @@ namespace Classes
             _cantidadPasajeros = cantidadPasajeros;
             _precio = precio;
         }
+
+
     }
 }

@@ -67,5 +67,35 @@ namespace Classes
                 _contratos.Add(nuevo);
             }
         }
+
+        public List<Contrato> ObtenerContratosDeCLiente(Cliente cliente)
+        {
+            List<Contrato> contratos = new List<Contrato>();
+
+            foreach (Contrato contrato in _contratos)
+            {
+                if (contrato.Cliente.Cedula == cliente.Cedula)
+                {
+                    contratos.Add(contrato);
+                }
+            }
+
+            return contratos;
+        }
+
+        public List<Excursion> BuscarExcursionesPorFecha(DateTime fecha1, DateTime fecha2)
+        {
+            List<Excursion> excursiones = new List<Excursion>();
+
+            foreach(Excursion excursion in _excursiones)
+            {
+                if (excursion.FechaComienzo > fecha1 && excursion.FechaComienzo < fecha2)
+                {
+                    excursiones.Add(excursion);
+                }
+            }
+
+            return excursiones;
+        }
     }
 }
