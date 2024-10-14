@@ -25,7 +25,7 @@ namespace Classes
         {
             _cliente = cliente;
             _excursion = excursion;
-            _cantMenores = cantidadPasajeros;
+            _cantMenores = cantMenores;
             _cantidadPasajeros = cantidadPasajeros;
             _precio = precio;
         }
