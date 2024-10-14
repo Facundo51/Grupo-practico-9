@@ -22,7 +22,5 @@ namespace Classes
                     _clientes.Add(nuevo);
                 }
             }
-           
-
         }
     }

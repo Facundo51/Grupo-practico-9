@@ -10,5 +10,19 @@ namespace Classes
     {
         private bool _pasaje;
         private decimal s_costoSecuro;
+
+        public Extranjero(
+            string codig, 
+            string descripcion, 
+            DateTime fechaComienzo, 
+            int dias, 
+            decimal costo,
+            bool pasaje,
+            decimal costoSeguro
+            ) : base(codig, descripcion, fechaComienzo, dias, costo)
+        {
+            _pasaje = pasaje;
+            s_costoSecuro = costoSeguro;
+        }
     }
 }
