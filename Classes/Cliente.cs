@@ -6,7 +6,7 @@ namespace Grupo
         private int _cedula;
         private string _nombre;
         private string _telefono;
-
+        public int Cedula { get { return _cedula; } }
         public Cliente(
             int cedula,
             string nombre,
@@ -32,15 +32,11 @@ namespace Grupo
         {
             if (obj is Cliente cliente)
             {
-                return _cedula == cliente.ObtenerCedula();
+                return _cedula == cliente.Cedula;
             }
 
             return false;
         }
 
-        public int ObtenerCedula()
-        {
-            return _cedula;
-        }
     }
 }
