@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grupo", "Grupo\Grupo.csproj", "{D48A8C77-D400-4D84-B220-2005F048292F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0316A55A-83CB-401E-9883-EC96929812EC} = {0316A55A-83CB-401E-9883-EC96929812EC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{0316A55A-83CB-401E-9883-EC96929812EC}"
 EndProject
