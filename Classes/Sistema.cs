@@ -14,6 +14,17 @@ namespace Classes
         private List<Cliente>  _clientes;
         private List<Excursion> _excursiones;
         private List<Contrato> _contratos;
+        
+        Sistema() {  
+        _clientes = new List<Cliente>();
+        _excursiones = new List<Excursion>();
+        _contratos = new List<Contrato>();
+            PrecargarNacionales();      // Bloque precargars  en el constructor del sistema
+            PrecargarExtranjero();
+            PrecargaCliente();
+            PrecargarContrato();
+        }
+
 
         public void agregarCliente(int ci, string nombre, string telefono)
         {
@@ -23,7 +34,14 @@ namespace Classes
                     _clientes.Add(nuevo);
                 }
         }
-    
+        public void PrecargaCliente()
+        {
+            Cliente nuevo = new Cliente(12345678, "marito", "099854563");
+            if (!(_clientes.Contains(nuevo)))
+            {
+                _clientes.Add(nuevo);
+            }
+        }
 
         public void PrecargarNacionales()
         {
@@ -39,6 +57,14 @@ namespace Classes
             if (!(_excursiones.Contains(nuevo)))
             {
                 _excursiones.Add(nuevo);
+            }
+        }
+        public void PrecargarContrato()
+        {
+            Contrato nuevo = new Contrato(_clientes[0], _excursiones[0],5,2,2.1m);
+            if (!(_contratos.Contains(nuevo)))
+            {
+                _contratos.Add(nuevo);
             }
         }
     }
