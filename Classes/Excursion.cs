@@ -15,7 +15,7 @@ namespace Classes
         private decimal _costo;
 
         public DateTime FechaComienzo {  get { return _fechaComienzo; } }
-
+        public string Codigo { get { return _codigo; } }
         public Excursion(
             string codig,
             string descripcion,
@@ -36,6 +36,15 @@ namespace Classes
         public void Validar()
         {
 
+        }
+        public override bool Equals(Excursion? obj)
+        {
+            bool res = false;
+            if (obj is Excursion)
+            {
+                return (_codigo == obj.Codigo );
+            }
+            return res;
         }
     }
 }

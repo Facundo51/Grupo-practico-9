@@ -16,7 +16,7 @@ namespace Classes
         private decimal _precio;
 
         public Cliente Cliente { get { return _cliente } }
-
+        public Excursion Excursion { get { return _excursion } }
         public Contrato(
             Cliente cliente,
             Excursion excursion,
@@ -32,6 +32,14 @@ namespace Classes
             _precio = precio;
         }
 
-
+        public override bool Equals(Contrato? obj)
+        {
+            bool res = false;
+            if (obj is Contrato )
+            {
+                return ((_cliente == obj.Cliente) &&(_excursion == obj.Excursion));
+            }
+            return res;
+        }
     }
 }
